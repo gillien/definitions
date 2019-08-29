@@ -14,16 +14,24 @@ months:
     regions: [lu]
     function: easter(year)
     function_modifier: -1
-  - name: Easter Monday
+  - name: Ouschterméindeg
     regions: [lu]
     function: easter(year)
     function_modifier: 1
+  - name: Christi Himmelfaart
+    regions: [lu]
+    function: easter(year)
+    function_modifier: 39
+  - name: Péngschtméindeg
+    regions: [lu]
+    function: easter(year)
+    function_modifier: 50
   1:
   - name: Neijoerschdag
     regions: [lu]
     mday: 1
   5:
-  - name: Fête du travail
+  - name: Dag vun der Aarbecht
     regions: [lu]
     mday: 1
   - name: Europadag
@@ -72,7 +80,7 @@ tests:
       regions: ["lu"]
       options: ["informal"]
     expect:
-      name: "Christi Himmelfaart"
+      name: "Dag vun der Aarbecht"
   - given:
       date: '2008-06-23'
       regions: ["lu"]
@@ -109,3 +117,9 @@ tests:
       options: ["informal"]
     expect:
       name: "Péngschtméindeg"
+  - given:
+      date: '2019-06-10'
+      regions: ["lu"]
+      options: ["informal"]
+    expect:
+      name: "Christi Himmelfaart"
